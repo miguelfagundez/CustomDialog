@@ -20,8 +20,13 @@ public class CustomDialog {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 
         LayoutInflater inflater = activity.getLayoutInflater();
+
+        //-- First custom alert dialog
         //builder.setView(inflater.inflate(R.layout.custom_dialog, null));
+
+        //-- Second custom alert dialog
         builder.setView(inflater.inflate(R.layout.custom_dialog_two, null));
+
         builder.setCancelable(true);
 
         dialog = builder.create();
