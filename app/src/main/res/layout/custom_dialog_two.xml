@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DDD7D7"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvGoodJob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#ABFFC0"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/cvWrong">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvGoodJob"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Good Answers!"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#247B37"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvAnswerGood"
+                    app:layout_constraintEnd_toStartOf="@id/tvPorcentageGood"/>
+                <ImageView
+                    android:id="@+id/ivGoodJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_thumb_up"
+                    app:layout_constraintTop_toBottomOf="@id/tvGoodJob"/>
+                <TextView
+                    android:id="@+id/tvAnswerGood"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="32"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvGoodJob"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                    android:id="@+id/tvPorcentageGood"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="66%"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@id/tvGoodJob"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvWrong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:padding="32dp"
+            app:cardBackgroundColor="#FF3943"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/cvGoodJob"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvWrong"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wrong Answers!"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="#801B20"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvPorcentageWrong"
+                    app:layout_constraintStart_toEndOf="@id/tvAnswerWrong"/>
+                <ImageView
+                    android:id="@+id/ivWrong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_thumb_down"
+                    app:layout_constraintTop_toBottomOf="@id/tvWrong"
+                    />
+
+                <TextView
+                    android:id="@+id/tvAnswerWrong"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="32"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvWrong"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/tvPorcentageWrong"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="66%"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@id/tvWrong"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
